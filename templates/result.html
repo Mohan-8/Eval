@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eval Results</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 100%;
+        max-width: 600px;
+      }
+
+      h1 {
+        color: #333333;
+      }
+
+      h2 {
+        color: #555555;
+        margin-top: 20px;
+      }
+
+      p {
+        color: #666666;
+        background-color: #f9f9f9;
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid #dddddd;
+        text-align: left;
+      }
+
+      .result-section {
+        margin-bottom: 20px;
+      }
+
+      .result-section p {
+        margin: 0;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Evaluation Results</h1>
+
+      <div class="result-section">
+        <h2>Student Extracted Text:</h2>
+        <p>{{ student_text }}</p>
+      </div>
+
+      <div class="result-section">
+        <h2>Teacher Extracted Text:</h2>
+        <p>{{ teacher_text }}</p>
+      </div>
+
+      <div class="result-section">
+        <h2>Student Summary:</h2>
+        <p>{{ student_summary }}</p>
+      </div>
+
+      <div class="result-section">
+        <h2>Student Keywords:</h2>
+        <p>{{ student_keywords }}</p>
+      </div>
+
+      <div class="result-section">
+        <h2>Teacher Summary:</h2>
+        <p>{{ teacher_summary }}</p>
+      </div>
+
+      <div class="result-section">
+        <h2>Teacher Keywords:</h2>
+        <p>{{ teacher_keywords }}</p>
+      </div>
+
+      <div class="result-section">
+        <h2>Student Score:</h2>
+        <p>{{ student_score }} / {{ max_marks }}</p>
+      </div>
+      <button onclick="redirectToHome()">Home</button>
+    </div>
+
+    <script>
+      function redirectToHome() {
+        window.location.href = "/";
+      }
+    </script>
+  </body>
+</html>
